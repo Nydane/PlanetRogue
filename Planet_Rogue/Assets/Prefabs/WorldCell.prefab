@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1246893207212650844}
   - component: {fileID: 1246893207212650845}
   - component: {fileID: 1246893207212650846}
+  - component: {fileID: -9207550586578294616}
   m_Layer: 0
   m_Name: WorldCell
   m_TagString: Untagged
@@ -59,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b802302a4bd12e34883726fe999a41a1, type: 2}
+  - {fileID: 2100000, guid: bfd32c1852c195c4582c6a45b4bc6848, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,3 +94,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   referenceObject: {fileID: 0}
+--- !u!65 &-9207550586578294616
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246893207212650847}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

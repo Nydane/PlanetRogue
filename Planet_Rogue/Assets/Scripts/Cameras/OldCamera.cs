@@ -72,10 +72,10 @@ public class oldCamera : MonoBehaviour
         transform.rotation = Quaternion.Euler(rotationCamera);
 
                  
-        if (!BetterJump.isJumping)
+       /* if (!BetterJump.isJumping)
         {
             constantHeight = GetCameraheight(15, 1.9f, movingPlayerHeight, cameraMovingHeight, targetFocus.transform.position.y);
-        }
+        }*/
 
 
     }

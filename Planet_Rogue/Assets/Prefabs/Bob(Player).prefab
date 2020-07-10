@@ -411,9 +411,8 @@ GameObject:
   - component: {fileID: 7103802383516743744}
   - component: {fileID: 7103802383516743773}
   - component: {fileID: 7103802383516743772}
-  - component: {fileID: 7103802383516743775}
-  - component: {fileID: 7103802383516743774}
   - component: {fileID: 7103802383516743745}
+  - component: {fileID: -3665877933919627967}
   m_Layer: 0
   m_Name: Bob(Player)
   m_TagString: Player
@@ -465,106 +464,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!114 &7103802383516743775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7103802383516743747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a569b3cc007790840bf16902e63c414b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  maxHealth: 100
-  healthBar: {fileID: 0}
-  forwardRayCastLength: 2
-  cooldownImmunityTimer: 0
-  immunityTimer: 1
-  isImmune: 0
-  tookDamage: 0
-  playerDead: 0
-  endImage: {fileID: 0}
-  _playerSpeed: 5
-  playerMaxSpeed: 8.1
-  _playerMinSpeed: 5
-  _playerSpeedIncr: 50
-  _playerSpeedDecr: 0
-  _airControlRatio: 50
-  moveVector: {x: 0, y: 0, z: 0}
-  moveVectorJump: {x: 0, y: 0, z: 0}
-  playerDirection: {x: 0, y: 0, z: 0}
-  horizontalMovement: 0
-  verticalMovement: 0
-  _canMove: 1
-  _canRotate: 1
-  _isCarrying: 0
-  rb: {fileID: 0}
-  render: {fileID: 7103802383127308800}
-  animator: {fileID: 7103802383516743745}
-  arms: {fileID: 7103802383135690697}
-  _canNewBearAttack: 1
-  bearKnockPower1: 3
-  bearKnockPower2: 3
-  bearKnockPower3: 3
-  bearTimeBetweenAttack: 2
-  timeMoveAfterBearAttack: 0.2
-  channelingBearAttack: 0
-  firstStack: {fileID: 0}
-  secondStack: {fileID: 0}
-  thirdStack: {fileID: 0}
-  bearAttackZone: {fileID: 0}
-  venomArrow: {fileID: 4844140255479140397, guid: 5cda14ced4f82fc44a48d7e69c4cd1ed,
-    type: 3}
-  venomArrowPos: {fileID: 0}
-  timeBetweenShoots: 5
-  canShoot: 1
-  timeBetweenDash: 2
-  _canDash: 1
-  dashVelocity: 20
-  throwPower: 10
-  carryDestination: {fileID: 0}
-  pickedUpEnemy: {fileID: 0}
---- !u!114 &7103802383516743774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7103802383516743747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce5d080420ae68f4abf50de5e7628a9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  legs: {fileID: 7103802382421251557}
-  _playerJumpForce: 13
-  fallMultiplier: 5
-  lowJumpMultiplier: 3
-  stopJumpTimer: 0.4
-  timeInTheAir: 0
-  jumpCount: 0
-  jumpAbility: 1
-  downObj:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  rayDownLength: 0.2
-  legCount: 0
-  legType: 0
-  bearSpeed: 8.1
-  bearFall: 40
-  eagleSpeed: 8.1
-  eggFirePoint: {fileID: 0}
-  eggPrefab: {fileID: 6278947418159574503, guid: 350ee59f2e266484dbcbde373a4c2d8a,
-    type: 3}
-  lynxDash: 3.5
-  lynxJump: 2.5
-  lynxSpeed: 10
 --- !u!95 &7103802383516743745
 Animator:
   serializedVersion: 3
@@ -584,6 +483,49 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-3665877933919627967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7103802383516743747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a569b3cc007790840bf16902e63c414b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 100
+  healthBar: {fileID: 0}
+  forwardRayCastLength: 2
+  cooldownImmunityTimer: 0
+  immunityTimer: 1
+  isImmune: 0
+  tookDamage: 0
+  playerDead: 0
+  endImage: {fileID: 0}
+  _playerSpeed: 0
+  playerMaxSpeed: 20
+  _playerMinSpeed: 5
+  _playerSpeedIncr: 0.9
+  _playerSpeedDecr: 0.9
+  _airControlRatio: 0.5
+  moveVector: {x: 0, y: 0, z: 0}
+  moveVectorJump: {x: 0, y: 0, z: 0}
+  playerDirection: {x: 0, y: 0, z: 0}
+  horizontalMovement: 0
+  verticalMovement: 0
+  _canMove: 1
+  _canRotate: 1
+  _isCarrying: 0
+  rb: {fileID: 0}
+  render: {fileID: 7103802383127308800}
+  animator: {fileID: 0}
+  arms: {fileID: 0}
+  timeBetweenDash: 2
+  _canDash: 1
+  dashVelocity: 10
 --- !u!1 &7103802384104975545
 GameObject:
   m_ObjectHideFlags: 0

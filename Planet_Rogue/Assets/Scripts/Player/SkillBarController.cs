@@ -35,9 +35,9 @@ public class SkillBarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cooldownX = Player.playerInstance.bearTimeBetweenAttack;
-        cooldownB = Player.playerInstance.timeBetweenDash;
-        cooldownY = Player.playerInstance.timeBetweenShoots;
+        //cooldownX = Player.playerInstance.bearTimeBetweenAttack;
+       // cooldownB = Player.playerInstance.timeBetweenDash;
+        //cooldownY = Player.playerInstance.timeBetweenShoots;
 
         // TOUCHE Y
         if (Input.GetKeyDown(KeyCode.Joystick1Button3))
