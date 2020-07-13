@@ -267,7 +267,7 @@ public class Player : MonoBehaviour
     public void DamageTaken (int damage)
     {
         health -= damage;
-        healthBar.SetHealth(health);
+        //healthBar.SetHealth(health);
         tookDamage = true;
 
         if (health <= 0)

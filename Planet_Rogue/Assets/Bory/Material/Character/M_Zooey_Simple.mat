@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_Zooey_Simple
+  m_Shader: {fileID: 4800000, guid: d608ec320c9698d4aa5842b181b40124, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AO:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Fresnel_Tex:
+        m_Texture: {fileID: 2800000, guid: 2d2c61052df48124aaf5bd6953dc5f3e, type: 3}
+        m_Scale: {x: 0, y: 10}
+        m_Offset: {x: 0, y: 0}
+    - _Mettalic:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Tex_Metalic:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Tex_Normal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample1:
+        m_Texture: {fileID: 2800000, guid: bc9b294136fae5a49ae0383dd5d82c16, type: 3}
+        m_Scale: {x: 2.57, y: 0}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AO_Cut: 0
+    - _AO_Cut_Max: 0
+    - _AO_Cut_Min: 0
+    - _AO_On: 0
+    - _AO_Strenght: 0
+    - _AO_Strenghtt: 0
+    - _AlphaCutoff: 0.5
+    - _DistanceCutoff: 0
+    - _Float1: 2.27
+    - _Float2: 2.98
+    - _LightRimAmount: 0.7
+    - _LightRimAmount1: 0.7
+    - _Metalic: 0
+    - _Normal_Strenght: 0
+    - _OutlinePowe: 8
+    - _OutlinePower: 0
+    - _Outline_Scal: 20
+    - _Outline_Scale: 41.3
+    - _Shadow_01_Size: 0
+    - _Shadow_02_Size: 0
+    - _ShardEdge1: 0.1
+    - _Smoothness: 0
+    - _SpecularSize: 4
+    - _SpecularSize1: 4
+    - _Specular_Color: 0.15
+    - _Specular_Color_M: 0.15
+    - _Specular_Strenght: 0.5
+    - _Width: 0.001
+    m_Colors:
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _LightRimSharp: {r: -0.1, g: 0.1, b: 0, a: 0}
+    - _LightRimSharp1: {r: -0.1, g: 0.1, b: 0, a: 0}
+    - _RimColor: {r: 1.356863, g: 1.247059, b: 0.9647059, a: 1}
+    - _RimColor1: {r: 0.579394, g: 1, b: 0, a: 1}
+    - _Shadow_01_Color: {r: 0.024357835, g: 0.015085444, b: 0.028301895, a: 1}
+    - _Sharp_Edge: {r: 0.42, g: 0.02, b: 0, a: 0}
+    - _SpecularSmooth: {r: 0.9, g: 1, b: 0, a: 0}
+    - _SpecularSmooth1: {r: 0.9, g: 1, b: 0, a: 0}

@@ -34,7 +34,7 @@ public class Eggs : MonoBehaviour
         if (other.tag == "Enemy")
         {
             col.radius = 2f;
-            other.GetComponent<Enemy>().TakeDamamge(20);
+            other.GetComponent<Enemy>().TakeDamage(20);
 
             //Destroy(gameObject);
         }

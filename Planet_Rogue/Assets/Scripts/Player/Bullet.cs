@@ -28,8 +28,9 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy")
+        if (other.CompareTag("Enemy"))
         {
+            other.GetComponent<Enemy>().TakeDamage(20);
 
             Destroy(gameObject);
         }
