@@ -41,27 +41,24 @@ public class Player : MonoBehaviour
     private float _playerSpeedIncr = 0.90f;
     [SerializeField]
     private float _playerSpeedDecr = 0.90f;
-    [SerializeField]
-    private float _airControlRatio = 0.5f;
+  
 
-    public Vector3 moveVector;
-    public Vector3 moveVectorJump;
-    public Vector3 playerDirection;
-    public float horizontalMovement;
-    public float verticalMovement;
-    private Vector3 lastDir;
+    private Vector3 moveVector;
+    private float horizontalMovement;
+    private float verticalMovement;
      
     [SerializeField]
     private bool _canMove = true;
     [SerializeField]
     private bool _canRotate = true;
-    public bool _isCarrying = false;
+    public bool useController;
 
     [Header("PlayerInfo")]
     public Rigidbody rb;
     public GameObject render;
     public Animator animator;
-    public Renderer arms;
+    private Camera mainCamera;
+    public GunController gunController;
 
       
     [Header("Dash")]
@@ -82,109 +79,33 @@ public class Player : MonoBehaviour
         rb = transform.GetComponent<Rigidbody>();
         playerInstance = this;
         health = maxHealth;
-        //basicCollider = GetComponentInChildren<EnemyDetectorBasic>();
+        mainCamera = FindObjectOfType<Camera>();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        
-        // logique pour immune après avoir pris des dégâts
 
+        // logique pour immune après avoir pris des dégâts
         if (tookDamage)
         {
             Immunity(immunityTimer);
-
         }
 
         //Death logique
         if (playerDead == true && Input.GetKeyDown(KeyCode.JoystickButton0))
         {
-
             Time.timeScale = 1;
-            SceneManager.LoadScene("Scene_Arena");
-            EnemyDetectorBear.EnemiesDetectedBear.Clear();
-            PickUpDetector.pickUpDetectorList.Clear();
-
         }
-
-       
-
-
-
-        
-
 
         // Identification des mouvements
         horizontalMovement = Input.GetAxisRaw("Horizontal");
         verticalMovement = Input.GetAxisRaw("Vertical");
 
-
         moveVector = new Vector3(horizontalMovement, 0f, verticalMovement);
 
-       
-      if (_canMove)
-      {
-        rb.MovePosition(rb.position + moveVector * _playerSpeed * Time.deltaTime);
-      }
-      else
-      {
-      rb.MovePosition(rb.position + Vector3.zero * Time.deltaTime);
-      }
-            // ce qui fait bouger le personnages
         
-
-
-        //direction du personnage : on fait rotate le render et non le player en tant que tel
-
-        if ((horizontalMovement != 0 || verticalMovement != 0) && _canRotate)
-        {
-            render.transform.rotation = Quaternion.LookRotation(moveVector);
-
-            if (horizontalMovement < 0)
-            {
-                playerDirection = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f).normalized;
-
-            }
-            if (horizontalMovement > 0)
-            {
-                playerDirection = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f).normalized;
-
-            }
-            if (verticalMovement < 0)
-            {
-                playerDirection = new Vector3(0f, 0f, Input.GetAxis("Vertical")).normalized;
-
-            }
-            if (verticalMovement > 0)
-            {
-                playerDirection = new Vector3(0f, 0f, Input.GetAxis("Vertical")).normalized;
-
-            }
-
-            if (verticalMovement > 0 && horizontalMovement > 0)
-            {
-                playerDirection = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical")).normalized;
-
-            }
-            if (verticalMovement > 0 && horizontalMovement < 0)
-            {
-                playerDirection = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical")).normalized;
-
-            }
-            if (verticalMovement < 0 && horizontalMovement > 0)
-            {
-                playerDirection = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical")).normalized;
-
-            }
-            if (verticalMovement < 0 && horizontalMovement < 0)
-            {
-                playerDirection = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical")).normalized;
-
-            }
-        }
-
 
         // speed Incr
         if (horizontalMovement > 0)
@@ -249,26 +170,79 @@ public class Player : MonoBehaviour
             }
         }
 
+        // rotatewithMouse
+        if (!useController)
+        {
+            Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
+            Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+            float rayLength;
+
+            if (groundPlane.Raycast(cameraRay, out rayLength))
+            {
+                Vector3 pointToLook = cameraRay.GetPoint(rayLength);
+                transform.LookAt(new Vector3(pointToLook.x, transform.position.y, pointToLook.z));
+            }
+
+            
+        }
+
+        //rotatewithcontroller
+        if (useController)
+        {
+            Vector3 playerDirection = Vector3.right * Input.GetAxisRaw("RHorizontal") + Vector3.forward * -Input.GetAxisRaw("RVertical");
+            if (playerDirection.sqrMagnitude > 0)
+            {
+                transform.rotation = Quaternion.LookRotation(playerDirection, Vector3.up);
+            }
+
+            if (Input.GetAxisRaw("RTrigger") > 0)
+            {
+                gunController.isFiring = true;
+            }
+
+            if (Input.GetAxisRaw("RTrigger") <= 0)
+            {
+                gunController.isFiring = false;
+            }
+        }
 
 
-        
+        // Mouse clique gauche
+        if (Input.GetMouseButtonDown(0))
+        {
+            gunController.isFiring = true;
+        }
+        if (Input.GetMouseButtonUp(0))
+        {
+            gunController.isFiring = false;
+        }
 
         // TOUCHE B : DASH
         if (Input.GetKeyUp(KeyCode.Joystick1Button1) && _canDash)
         {
             StartCoroutine(Dash(dashVelocity));
-
             
         }
 
         
     }
 
-   
 
-    
 
-    
+
+    private void FixedUpdate()
+    {
+        if (_canMove)
+        {
+            rb.MovePosition(rb.position + moveVector * _playerSpeed * Time.deltaTime);
+        }
+        else
+        {
+            rb.MovePosition(rb.position + Vector3.zero * Time.deltaTime);
+        }
+        // ce qui fait bouger le personnages
+    }
+
 
     IEnumerator Dash(float dashPower)
     {
@@ -276,7 +250,7 @@ public class Player : MonoBehaviour
         
         if (verticalMovement ==0 && horizontalMovement == 0)
         {
-            rb.velocity = playerDirection * dashPower;
+            rb.velocity = moveVector * dashPower;
         }
         else rb.velocity = new Vector3(horizontalMovement, 0f, verticalMovement) * dashPower;
 

@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
     public int maxenemyHealth = 100;
     public HealthBar healthBar;
 
-    [Header("Pomme")]
+    [Header("Enemy Info")]
     private Player _player;
     private Rigidbody rbEnemy;
     private Renderer _renderer;
@@ -111,21 +111,11 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    /*public IEnumerator DoDamage()
-    {
-        yield return new WaitForSeconds(1);
-        Player.playerInstance.DamageTaken(doingDamage);
-    }*/
+    
 
     public void Die()
     {
         Debug.Log("You killed an enemy");
-        EnemyDetectorRectangle.EnemiesDetectedRectangle.Remove(this);
-        EnemyDectectorSphere.EnemiesDetectedSphere.Remove(this);
-        EnemyDetectorBear.EnemiesDetectedBear.Remove(this);
-        EnemyDetectorLynx.EnemiesDetectedLynx.Remove(this);
-        EnemyDetectorEagle.EnemiesDetectedEagle.Remove(this);
-        EnemyDetectorBasic.EnemiesDetectedBasic.Remove(this);
         gameObject.SetActive(false);
     }
 

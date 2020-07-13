@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class oldCamera : MonoBehaviour
+public class OldCamera : MonoBehaviour
 {
     [Header("Camera Parameters")]
     public Transform targetFocus;
@@ -18,11 +18,6 @@ public class oldCamera : MonoBehaviour
     public float movingPlayerHeight =5f;
     public float cameraMovingHeight = 5f;
 
-    /*Ray rayToCameraPos;
-    private Renderer _groundRenderer;
-    private GameObject _groundObj;
-    public Material newMaterial;
-    public Material oldMaterial;*/
 
     private void Start()
     {
@@ -31,34 +26,22 @@ public class oldCamera : MonoBehaviour
 
     private void Update()
     {
-       /* rayToCameraPos = new Ray(transform.position, targetFocus.transform.position - transform.position);
-        Debug.DrawRay(transform.position, targetFocus.transform.position - transform.position);
         
-        if (Physics.Raycast(rayToCameraPos, out RaycastHit hitInfo, 1000))
-        {
-            _groundObj = hitInfo.collider.gameObject;
-
-            if (_groundObj.tag == "Ground")
-            {
-
-                _groundRenderer = hitInfo.transform.GetComponent<Renderer>();
-                _groundRenderer.enabled = false;
-
-            }
-            if (!_groundObj.tag == "Ground")
-            {
-                _groundRenderer.enabled = true;
-            }
-        }*/
     }
     // Update is called once per frame
     void LateUpdate()
+    {
+
+    }
+
+
+    private void FixedUpdate()
     {
         Vector3 vOffset = Vector3.up * _verticalOffset;
         Vector3 hOffset = Vector3.right * horizontalOffset;
         Vector3 dist = Vector3.forward * -distance;
         Vector3 finalPos = targetFocus.position + dist + vOffset + hOffset;
-        finalPos.y =constantHeight;
+        finalPos.y = constantHeight;
 
         //transform.position = finalPos;
         Vector3 hMove = Vector3.Lerp(transform.position, finalPos, lerpTime);
@@ -70,14 +53,6 @@ public class oldCamera : MonoBehaviour
         transform.position = vMove + hMove;
 
         transform.rotation = Quaternion.Euler(rotationCamera);
-
-                 
-       /* if (!BetterJump.isJumping)
-        {
-            constantHeight = GetCameraheight(15, 1.9f, movingPlayerHeight, cameraMovingHeight, targetFocus.transform.position.y);
-        }*/
-
-
     }
     /// <summary>
     /// 
