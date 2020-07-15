@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WorldCell : MonoBehaviour
+public class WorldLooper : MonoBehaviour
 {
 	public GameObject referenceObject;
 
@@ -14,14 +13,14 @@ public class WorldCell : MonoBehaviour
 
 	// Update is called once per frame
 	void Update()
-    {
+	{
 		Vector3 Ppos = referenceObject.transform.position;
 		Ppos.y = transform.position.y;
 
 		if (transform.position.x < referenceObject.transform.position.x - Bounds.bounds.x)
-        {
+		{
 			LoopX();
-        }
+		}
 		else if (transform.position.x > referenceObject.transform.position.x + Bounds.bounds.x)
 		{
 			LoopX();
@@ -37,7 +36,7 @@ public class WorldCell : MonoBehaviour
 		}
 
 
-		
+
 	}
 
 	private void LoopX()
@@ -46,12 +45,12 @@ public class WorldCell : MonoBehaviour
 		transform.position += new Vector3(Bounds.jumpX * jDirX, 0, 0);
 	}
 
-	private void LoopZ ()
+	private void LoopZ()
 	{
 		float jDirY = Mathf.Sign(referenceObject.transform.position.z - transform.position.z);
 		transform.position += new Vector3(0, 0, Bounds.jumpY * jDirY);
 
 	}
 
-	
+
 }

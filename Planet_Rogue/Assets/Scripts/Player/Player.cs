@@ -234,11 +234,15 @@ public class Player : MonoBehaviour
     {
         if (_canMove)
         {
-            rb.MovePosition(rb.position + moveVector * _playerSpeed * Time.deltaTime);
+            //rb.MovePosition(rb.position + moveVector * _playerSpeed * Time.deltaTime);
+            transform.position += moveVector.normalized * _playerSpeed * Time.deltaTime;
+
         }
         else
         {
-            rb.MovePosition(rb.position + Vector3.zero * Time.deltaTime);
+            //rb.MovePosition(rb.position + Vector3.zero * Time.deltaTime);
+            transform.position += Vector3.zero * Time.deltaTime;
+
         }
         // ce qui fait bouger le personnages
     }

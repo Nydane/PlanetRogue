@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NotSlot_Bending Enemy
-  m_Shader: {fileID: -6465566751694194690, guid: bf3e55e4d1071c641b1c1f0f80e5d38a,
+  m_Name: NotSlot_Bending MasterFesnel
+  m_Shader: {fileID: -6465566751694194690, guid: 7e853083b5b66d3439ac42e756cfce72,
     type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -27,3 +27,4 @@ Material:
     m_Floats: []
     m_Colors:
     - Vector2_6A93A1CF: {r: 1, g: 1, b: 0, a: 0}
+    - _mainColor: {r: 1, g: 1, b: 1, a: 0}

@@ -12,7 +12,7 @@ public class EnemyFollowPlayer : MonoBehaviour
     void Start()
     {
         enemy = GetComponent<Enemy>();
-        _rb = GetComponent<Rigidbody>();
+       // _rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -22,7 +22,8 @@ public class EnemyFollowPlayer : MonoBehaviour
  
         {
             Vector3 moveDirection = Player.playerInstance.transform.position - transform.position;
-            _rb.MovePosition(transform.position + moveDirection.normalized * speed * Time.deltaTime);
+            //_rb.MovePosition(transform.position + moveDirection.normalized * speed * Time.deltaTime);
+            transform.position += moveDirection.normalized * speed * Time.deltaTime;
         }
         
     }
