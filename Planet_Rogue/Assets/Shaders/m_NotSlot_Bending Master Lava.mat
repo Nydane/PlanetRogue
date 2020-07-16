@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NotSlot_Bending Master Bullet
+  m_Name: m_NotSlot_Bending Master Lava
   m_Shader: {fileID: -6465566751694194690, guid: bf3e55e4d1071c641b1c1f0f80e5d38a,
     type: 3}
   m_ShaderKeywords: 
@@ -21,9 +21,10 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_72426835:
-        m_Texture: {fileID: 2800000, guid: 501a25db499fd314ebf80776f0f19e56, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0d2720b061c5c0a4db45188a2887d2d9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
     - Vector2_6A93A1CF: {r: 1, g: 1, b: 0, a: 0}
+    - _mainColor: {r: 16, g: 0, b: 0, a: 0}

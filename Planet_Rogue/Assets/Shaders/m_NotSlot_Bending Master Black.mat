@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NotSlot_Bending Master Black
+  m_Name: m_NotSlot_Bending Master Black
   m_Shader: {fileID: -6465566751694194690, guid: bf3e55e4d1071c641b1c1f0f80e5d38a,
     type: 3}
   m_ShaderKeywords: 
