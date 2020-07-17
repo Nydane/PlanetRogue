@@ -16,7 +16,6 @@ public class Player : MonoBehaviour
     public int health;
     public int maxHealth = 100;
     public HealthBar healthBar;
-    public float forwardRayCastLength = 2f;
 
     [Header("Immune")]
     public float cooldownImmunityTimer = 0f;
@@ -271,7 +270,7 @@ public class Player : MonoBehaviour
     public void DamageTaken (int damage)
     {
         health -= damage;
-        //healthBar.SetHealth(health);
+        healthBar.SetHealth(health);
         tookDamage = true;
 
         if (health <= 0)

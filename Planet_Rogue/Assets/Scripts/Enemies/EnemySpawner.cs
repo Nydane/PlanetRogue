@@ -8,6 +8,7 @@ public class EnemySpawner : MonoBehaviour
     public float TimeBetweenEachSpawn;
     private float timerIncreasing;
     public GameObject enemyPrefab;
+    public int numberOfEnemies = 10;
 
     // Start is called before the first frame update
     
@@ -17,10 +18,15 @@ public class EnemySpawner : MonoBehaviour
     void Update()
     {
         timerIncreasing += Time.deltaTime;
-        if (timerIncreasing> TimeBetweenEachSpawn)
+        if (numberOfEnemies >= 0)
         {
-            Instantiate(enemyPrefab, transform.position, Quaternion.identity);
-            timerIncreasing = 0;
+            if (timerIncreasing > TimeBetweenEachSpawn)
+            {
+                Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+                timerIncreasing = 0;
+                numberOfEnemies--;
+            }
         }
+
     }
 }
