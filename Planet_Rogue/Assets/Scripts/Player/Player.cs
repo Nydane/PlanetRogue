@@ -59,7 +59,14 @@ public class Player : MonoBehaviour
     private Camera mainCamera;
     public GunController gunController;
 
-      
+    [Header("CellSelector")]
+    public GameObject cellSelector;
+    public Renderer cellMaterial;
+    private float rayLength = 5f;
+    public Material startCellSelectorMaterial;
+    public Material newCellSelectorMaterial;
+
+
     [Header("Dash")]
     public float timeBetweenDash = 2f;
     [SerializeField]
@@ -85,6 +92,35 @@ public class Player : MonoBehaviour
     void Update()
     {
 
+        //Raycast pour le selector de cell
+       /* Ray downRay = new Ray(cellSelector.transform.position, Vector3.down * rayLength);
+        Debug.DrawRay(cellSelector.transform.position, Vector3.down * rayLength);
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            if (Physics.Raycast(downRay, out RaycastHit hitInfo, rayLength))
+            {
+                if (hitInfo.collider.tag == "Ground")
+                {
+                    cellMaterial = hitInfo.collider.GetComponent<Renderer>();
+                    cellMaterial.material = newCellSelectorMaterial;
+                }
+            }
+        }
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            if (Physics.Raycast(downRay, out RaycastHit hitInfo, rayLength))
+            {
+                if (hitInfo.collider.tag == "Ground")
+                {
+                    cellMaterial = hitInfo.collider.GetComponent<Renderer>();
+                    cellMaterial.material = startCellSelectorMaterial;
+                }
+            }
+        }*/
+
+
+      
 
         // logique pour immune après avoir pris des dégâts
         if (tookDamage)
@@ -303,6 +339,7 @@ public class Player : MonoBehaviour
     }
 
 
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.transform.tag == "Enemy")
@@ -315,6 +352,9 @@ public class Player : MonoBehaviour
             }
         }
     }
+
+
+    
 
 }
 
