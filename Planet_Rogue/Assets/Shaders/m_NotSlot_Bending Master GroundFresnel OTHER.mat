@@ -32,4 +32,4 @@ Material:
     m_Colors:
     - Fresnel_Color: {r: 766.9961, g: 766.9961, b: 766.9961, a: 0}
     - Vector2_6A93A1CF: {r: 1, g: 1, b: 0, a: 0}
-    - _mainColor: {r: 1, g: 0, b: 0.0766139, a: 0}
+    - _mainColor: {r: 0.85850453, g: 1, b: 0, a: 0}

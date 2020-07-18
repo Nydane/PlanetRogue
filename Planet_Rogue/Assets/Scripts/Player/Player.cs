@@ -251,6 +251,12 @@ public class Player : MonoBehaviour
         {
             gunController.isFiring = false;
         }
+        if (Input.GetKey(KeyCode.A))
+        {
+            gunController.isFiring = false;
+
+        }
+
 
         // TOUCHE B : DASH
         if (Input.GetKeyUp(KeyCode.Joystick1Button1) && _canDash)
@@ -351,10 +357,41 @@ public class Player : MonoBehaviour
 
             }
         }
+
+        if (collision.transform.tag == "Ground")
+        {
+            if (collision.transform.GetComponent<WorldCell>().isLava == true)
+            {
+
+                if (!isImmune)
+                {
+                    DamageTaken(20);
+
+                }
+
+            }
+        }
+
+    }
+    
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.transform.tag == "Ground")
+        {
+            if (collision.transform.GetComponent<WorldCell>().isLava == true)
+            {
+                
+                if (!isImmune)
+                {
+                    DamageTaken(20);
+
+                }
+
+            }
+        }
     }
 
 
-    
 
 }
 

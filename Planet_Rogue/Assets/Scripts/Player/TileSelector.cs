@@ -6,19 +6,23 @@ public class TileSelector : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    private Renderer cellMaterial;
     public Material newCellSelectorMaterial;
-    private Material oldMaterial;
+    public Material oldMaterial;
+    public Material lavaMaterial;
+    public Renderer cellRenderer;
+
+    private void Start()
+    {
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Ground")
+        if (other.transform.CompareTag("Ground"))
         {
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKey(KeyCode.A) && other.GetComponent<WorldCell>().isLava == false)
             {
-                cellMaterial = other.GetComponent<Renderer>();
-                oldMaterial = cellMaterial.material;
-                cellMaterial.material = newCellSelectorMaterial;
+                cellRenderer = other.GetComponent<Renderer>();
+                cellRenderer.material = newCellSelectorMaterial;
 
             }
         }
@@ -26,13 +30,49 @@ public class TileSelector : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Ground")
+        if (other.transform.CompareTag("Ground"))
         {
+            if (Input.GetKey(KeyCode.A) && other.GetComponent<WorldCell>().isLava == false)
+            {
+                cellRenderer = other.GetComponent<Renderer>();
+                cellRenderer.material = oldMaterial;
+            }
+        }
+    }
 
-            cellMaterial = other.GetComponent<Renderer>();
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.transform.CompareTag("Ground"))
+        {
+            if (Input.GetKeyUp(KeyCode.A) && other.GetComponent<WorldCell>().isLava == false)
+            {
+                cellRenderer = other.GetComponent<Renderer>();
+                cellRenderer.material = oldMaterial;
+            }
+            else if (Input.GetKey(KeyCode.A) && other.GetComponent<WorldCell>().isLava == false)
+            {
+                cellRenderer = other.GetComponent<Renderer>();
+                cellRenderer.material =  newCellSelectorMaterial;
+                
+            }
             
-            cellMaterial.material = oldMaterial;
 
+
+            if (Input.GetKey(KeyCode.A) && Input.GetMouseButton(1) && other.GetComponent<WorldCell>().isLava == false)
+            {
+                cellRenderer = other.GetComponent<Renderer>();
+                cellRenderer.material = oldMaterial;
+            }
+
+           
+            if (Input.GetKey(KeyCode.A) && Input.GetMouseButton(0))
+            {
+                cellRenderer = other.GetComponent<Renderer>();
+                cellRenderer.material = lavaMaterial;
+                other.GetComponent<WorldCell>().isLava = true;
+                
+            }
         }
     }
 }

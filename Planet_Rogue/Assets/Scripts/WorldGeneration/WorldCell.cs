@@ -6,8 +6,9 @@ using UnityEngine;
 public class WorldCell : MonoBehaviour
 {
 	public GameObject referenceObject;
+	public bool isLava = false;
 
-	private void Start()
+    private void Start()
 	{
 		referenceObject = GameObject.Find("Player");
 	}
@@ -54,4 +55,6 @@ public class WorldCell : MonoBehaviour
 	}
 
 	
+	
+
 }
