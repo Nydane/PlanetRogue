@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bfd32c1852c195c4582c6a45b4bc6848, type: 2}
+  - {fileID: 2100000, guid: a6f6d8007a5f8684aabcc32f011f1a4a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,6 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   referenceObject: {fileID: 4695877688615118386, guid: d4fe73470f202b74e9819876f12758b1,
     type: 3}
+  isLava: 0
+  lavaMaterial: {fileID: 2100000, guid: 1bb3cc1469517134cb9e883bef83adaf, type: 2}
 --- !u!65 &-9207550586578294616
 BoxCollider:
   m_ObjectHideFlags: 0

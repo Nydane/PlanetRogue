@@ -8,6 +8,7 @@ public class GridEditor : EditorWindow
     public static GridEditor instance;
     public GameObject cellPrefab;
     public GameObject parent;
+    public GameObject clearParent;
     public int x;
     public int y;
     public float size;
@@ -21,7 +22,9 @@ public class GridEditor : EditorWindow
             {
                 cellPrefab = EditorGUILayout.ObjectField("Prefab", cellPrefab, typeof(GameObject), false) as GameObject;
                 parent = EditorGUILayout.ObjectField("Parent", parent, typeof(GameObject), true) as GameObject;
-                
+                clearParent = EditorGUILayout.ObjectField("clearParent", clearParent, typeof(GameObject), true) as GameObject;
+
+
 
                 x = (int)EditorGUILayout.Slider("X", x, 1f, 50f);
                 y = (int)EditorGUILayout.Slider("Y", y, 1f, 50f);
@@ -73,11 +76,10 @@ public class GridEditor : EditorWindow
 
     protected void ClearGrid()
     {
-        GameObject p = GameObject.Find("Environment");
-        int count = p.transform.childCount;
+        int count = clearParent.transform.childCount;
         for (int i = count-1; i >= 0; i--)
         {
-            DestroyImmediate(p.transform.GetChild(i).gameObject);
+            DestroyImmediate(clearParent.transform.GetChild(i).gameObject);
 
         }
     }

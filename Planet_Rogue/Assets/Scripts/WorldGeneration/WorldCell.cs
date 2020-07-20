@@ -7,6 +7,8 @@ public class WorldCell : MonoBehaviour
 {
 	public GameObject referenceObject;
 	public bool isLava = false;
+	//private Renderer cellRenderer;
+	//public Material lavaMaterial;
 
     private void Start()
 	{
@@ -55,6 +57,13 @@ public class WorldCell : MonoBehaviour
 	}
 
 	
-	
+	/*public void LavaTile()
+    {
+
+		this.cellRenderer.material = lavaMaterial;
+		this.gameObject.tag = "LavaTile";
+		isLava = true;
+
+	}*/
 
 }

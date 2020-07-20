@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Enemy
   - Ground
+  - WaterTile
+  - GrassTile
+  - LavaTile
+  - RessourceTile
   layers:
   - Default
   - TransparentFX

@@ -376,7 +376,7 @@ public class Player : MonoBehaviour
     
     private void OnCollisionStay(Collision collision)
     {
-        if (collision.transform.tag == "Ground")
+        if (collision.transform.tag == "LavaTile")
         {
             if (collision.transform.GetComponent<WorldCell>().isLava == true)
             {
