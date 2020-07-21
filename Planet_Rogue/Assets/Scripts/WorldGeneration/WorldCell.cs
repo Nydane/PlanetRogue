@@ -7,8 +7,8 @@ public class WorldCell : MonoBehaviour
 {
 	public GameObject referenceObject;
 	public bool isLava = false;
-	//private Renderer cellRenderer;
-	//public Material lavaMaterial;
+	public bool hasRessource = false;
+	public GameObject ressources;
 
     private void Start()
 	{
@@ -56,7 +56,11 @@ public class WorldCell : MonoBehaviour
 
 	}
 
-	
+	public void RessourcesCollected()
+    {
+		Destroy(ressources.gameObject);
+    }
+
 	/*public void LavaTile()
     {
 

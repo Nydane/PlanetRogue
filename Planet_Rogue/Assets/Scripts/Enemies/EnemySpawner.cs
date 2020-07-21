@@ -5,10 +5,12 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
 
-    public float TimeBetweenEachSpawn;
+    public float timeBetweenEachSpawn;
     private float timerIncreasing;
     public GameObject enemyPrefab;
     public int numberOfEnemies = 10;
+    public float timeBeforeSpawnIncreasing;
+    public float timerBeforeSpawn;
 
     // Start is called before the first frame update
     
@@ -18,9 +20,11 @@ public class EnemySpawner : MonoBehaviour
     void Update()
     {
         timerIncreasing += Time.deltaTime;
-        if (numberOfEnemies >= 0)
+        timeBeforeSpawnIncreasing += Time.deltaTime;
+        if (numberOfEnemies > 0 && timeBeforeSpawnIncreasing >= timerBeforeSpawn)
         {
-            if (timerIncreasing > TimeBetweenEachSpawn)
+            timeBeforeSpawnIncreasing = timerBeforeSpawn;
+            if (timerIncreasing > timeBetweenEachSpawn)
             {
                 Instantiate(enemyPrefab, transform.position, Quaternion.identity);
                 timerIncreasing = 0;

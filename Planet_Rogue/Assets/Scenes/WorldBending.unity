@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.082897395, g: 0.48837775, b: 0.67537975, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 61cfe189927ea9c43968cd05fdaee389,
+    type: 2}
   m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
@@ -117,10 +118,16 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    accuratePlacement: 1
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 3c204e7e50dca9f4dbf684f5ad84874f, type: 2}
+--- !u!1 &6316286 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 886189f8884ea3943b4bd529e86e1f44,
+    type: 3}
+  m_PrefabInstance: {fileID: 1326281680}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &9676613 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8314032409245991889, guid: 656a184609261e34298e8023e2605b20,
@@ -653,6 +660,55 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!1 &63986481
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 63986482}
+  - component: {fileID: 63986483}
+  m_Layer: 0
+  m_Name: Spawn2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &63986482
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63986481}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 51, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 323923016}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &63986483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63986481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70b050e329a214248aa9da49e4783b01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenEachSpawn: 5
+  enemyPrefab: {fileID: 3494064578268851139, guid: 1c697c66536adad45a667fb387edf5e6,
+    type: 3}
+  numberOfEnemies: 10
+  timeBeforeSpawnIncreasing: 0
+  timerBeforeSpawn: 10
 --- !u!1 &64293480 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8314032409336622501, guid: 656a184609261e34298e8023e2605b20,
@@ -1338,7 +1394,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 237196644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.8, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 323923016}
@@ -1356,10 +1412,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70b050e329a214248aa9da49e4783b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeBetweenEachSpawn: 5
+  timeBetweenEachSpawn: 5
   enemyPrefab: {fileID: 3494064578268851139, guid: 1c697c66536adad45a667fb387edf5e6,
     type: 3}
-  numberOfEnemies: 0
+  numberOfEnemies: 10
+  timeBeforeSpawnIncreasing: 0
+  timerBeforeSpawn: 10
 --- !u!1 &237261078 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8314032410095464206, guid: 656a184609261e34298e8023e2605b20,
@@ -1849,7 +1907,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &323923016
 Transform:
   m_ObjectHideFlags: 0
@@ -1862,8 +1920,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 237196645}
+  - {fileID: 63986482}
+  - {fileID: 1164043260}
+  - {fileID: 1118660467}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &332106183 stripped
 GameObject:
@@ -1995,7 +2056,7 @@ Transform:
   - {fileID: 2039637930}
   - {fileID: 1348736702}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &338467751 stripped
 GameObject:
@@ -2361,6 +2422,80 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!1 &398486424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 398486425}
+  - component: {fileID: 398486427}
+  - component: {fileID: 398486426}
+  m_Layer: 5
+  m_Name: Borders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &398486425
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398486424}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 925892482}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 10, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &398486426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398486424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 979e601183e4b3a4781c81f534ec025f, type: 2}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &398486427
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 398486424}
+  m_CullTransparentMesh: 0
 --- !u!1 &413610301 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8314032410042941654, guid: 656a184609261e34298e8023e2605b20,
@@ -2515,6 +2650,80 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!1 &469519679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 469519680}
+  - component: {fileID: 469519682}
+  - component: {fileID: 469519681}
+  m_Layer: 5
+  m_Name: Borders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &469519680
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469519679}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1448540295}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 10, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &469519681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469519679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 979e601183e4b3a4781c81f534ec025f, type: 2}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &469519682
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469519679}
+  m_CullTransparentMesh: 0
 --- !u!1 &469823697 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8314032408682752981, guid: 656a184609261e34298e8023e2605b20,
@@ -2614,6 +2823,80 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!1 &488268020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 488268021}
+  - component: {fileID: 488268023}
+  - component: {fileID: 488268022}
+  m_Layer: 5
+  m_Name: Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &488268021
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488268020}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 925892482}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.0089998245, y: 0}
+  m_SizeDelta: {x: -0.5057528, y: -0.241}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &488268022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488268020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: e039cfbc5c9fef645939cc6ccee695e8, type: 2}
+  m_Color: {r: 1, g: 0.0141509175, b: 0.0141509175, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &488268023
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488268020}
+  m_CullTransparentMesh: 0
 --- !u!1 &496774411 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8314032408904744287, guid: 656a184609261e34298e8023e2605b20,
@@ -3155,6 +3438,7 @@ MonoBehaviour:
   waterSelected: {fileID: 2100000, guid: 2c65c3c9580b43b4aa85e052e48b0c94, type: 2}
   lavaMaterial: {fileID: 2100000, guid: 473ae18d092a19548b047a46f7f10a29, type: 2}
   cellRenderer: {fileID: 0}
+  ressources: {fileID: 0}
 --- !u!1 &663102557 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8314032408983751571, guid: 656a184609261e34298e8023e2605b20,
@@ -3260,6 +3544,27 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8314032410468065388}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &675181464 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8979031015686227816, guid: 656a184609261e34298e8023e2605b20,
+    type: 3}
+  m_PrefabInstance: {fileID: 8314032410468065388}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &675181465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675181463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08ff3b137c327a940a4e72285dfaf205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentBuildingHealth: 0
+  maxBuildingHealth: 1000
+  healthBar: {fileID: 925892483}
 --- !u!64 &675181467
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3274,6 +3579,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: a1fec1f953cf15b42bf4c5b41eed40f3, type: 3}
+--- !u!54 &675181469
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675181463}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &695134260 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8314032408862571165, guid: 656a184609261e34298e8023e2605b20,
@@ -4388,6 +4709,108 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!1 &925892481
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 925892482}
+  - component: {fileID: 925892484}
+  - component: {fileID: 925892483}
+  m_Layer: 5
+  m_Name: HealthBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &925892482
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925892481}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 398486425}
+  - {fileID: 488268021}
+  m_Father: {fileID: 1000659666}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 10, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &925892483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925892481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d39ba658ea9198498e8749e12fd900d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 925892484}
+--- !u!114 &925892484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925892481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_FillRect: {fileID: 488268021}
+  m_HandleRect: {fileID: 0}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 100
+  m_WholeNumbers: 0
+  m_Value: 100
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &933515620 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8314032408691795877, guid: 656a184609261e34298e8023e2605b20,
@@ -4520,6 +4943,80 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!1 &957834844
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 957834845}
+  - component: {fileID: 957834847}
+  - component: {fileID: 957834846}
+  m_Layer: 5
+  m_Name: Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &957834845
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957834844}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1448540295}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.0089998245, y: 0}
+  m_SizeDelta: {x: -0.5057528, y: -0.241}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &957834846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957834844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: e039cfbc5c9fef645939cc6ccee695e8, type: 2}
+  m_Color: {r: 1, g: 0.0141509175, b: 0.0141509175, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &957834847
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957834844}
+  m_CullTransparentMesh: 0
 --- !u!1 &980301946 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8314032410499814951, guid: 656a184609261e34298e8023e2605b20,
@@ -4652,6 +5149,119 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!1 &1000659665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1000659666}
+  - component: {fileID: 1000659670}
+  - component: {fileID: 1000659669}
+  - component: {fileID: 1000659668}
+  - component: {fileID: 1000659667}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1000659666
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000659665}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -3}
+  m_LocalScale: {x: 1, y: 5, z: 1}
+  m_Children:
+  - {fileID: 925892482}
+  m_Father: {fileID: 675181464}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 10}
+  m_SizeDelta: {x: 50, y: 2.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1000659667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000659665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0098c6821f5b8c047909f4a2cf021893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 53843168}
+--- !u!114 &1000659668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000659665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1000659669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000659665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &1000659670
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000659665}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1001 &1002183578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4734,10 +5344,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: crystals
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f2927a1bf70c89b4197181abbce21c29,
+        type: 3}
+      propertyPath: m_TagString
+      value: RessourceTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f2927a1bf70c89b4197181abbce21c29,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6867513384072063378, guid: f2927a1bf70c89b4197181abbce21c29,
         type: 3}
       propertyPath: m_Name
       value: crystal
+      objectReference: {fileID: 0}
+    - target: {fileID: 6867513384072063378, guid: f2927a1bf70c89b4197181abbce21c29,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8196600095301519479, guid: f2927a1bf70c89b4197181abbce21c29,
         type: 3}
@@ -5307,6 +5932,55 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!1 &1118660466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1118660467}
+  - component: {fileID: 1118660468}
+  m_Layer: 0
+  m_Name: Spawn4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1118660467
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118660466}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.3, y: 3, z: 50.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 323923016}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1118660468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118660466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70b050e329a214248aa9da49e4783b01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenEachSpawn: 5
+  enemyPrefab: {fileID: 3494064578268851139, guid: 1c697c66536adad45a667fb387edf5e6,
+    type: 3}
+  numberOfEnemies: 10
+  timeBeforeSpawnIncreasing: 0
+  timerBeforeSpawn: 10
 --- !u!1 &1129881443
 GameObject:
   m_ObjectHideFlags: 0
@@ -5371,7 +6045,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1138333191 stripped
 GameObject:
@@ -5538,6 +6212,55 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!1 &1164043259
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1164043260}
+  - component: {fileID: 1164043261}
+  m_Layer: 0
+  m_Name: Spawn3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1164043260
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164043259}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 51, y: 3, z: 51}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 323923016}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1164043261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164043259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70b050e329a214248aa9da49e4783b01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenEachSpawn: 5
+  enemyPrefab: {fileID: 3494064578268851139, guid: 1c697c66536adad45a667fb387edf5e6,
+    type: 3}
+  numberOfEnemies: 10
+  timeBeforeSpawnIncreasing: 0
+  timerBeforeSpawn: 10
 --- !u!1 &1172858556 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8314032410025563801, guid: 656a184609261e34298e8023e2605b20,
@@ -5988,10 +6711,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: crystal
       objectReference: {fileID: 0}
+    - target: {fileID: 530615173485862968, guid: 886189f8884ea3943b4bd529e86e1f44,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 886189f8884ea3943b4bd529e86e1f44,
         type: 3}
       propertyPath: m_Name
       value: crystals2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 886189f8884ea3943b4bd529e86e1f44,
+        type: 3}
+      propertyPath: m_TagString
+      value: RessourceTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 886189f8884ea3943b4bd529e86e1f44,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 886189f8884ea3943b4bd529e86e1f44, type: 3}
@@ -6199,6 +6937,119 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!1 &1394756160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1394756161}
+  - component: {fileID: 1394756165}
+  - component: {fileID: 1394756164}
+  - component: {fileID: 1394756163}
+  - component: {fileID: 1394756162}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1394756161
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394756160}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -3}
+  m_LocalScale: {x: 1, y: 5, z: 1}
+  m_Children:
+  - {fileID: 1448540295}
+  m_Father: {fileID: 1825093588}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 10}
+  m_SizeDelta: {x: 50, y: 2.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1394756162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394756160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0098c6821f5b8c047909f4a2cf021893, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 53843168}
+--- !u!114 &1394756163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394756160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1394756164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394756160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &1394756165
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394756160}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &1414648302 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8314032409240980292, guid: 656a184609261e34298e8023e2605b20,
@@ -6265,6 +7116,108 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!1 &1448540294
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1448540295}
+  - component: {fileID: 1448540297}
+  - component: {fileID: 1448540296}
+  m_Layer: 5
+  m_Name: HealthBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1448540295
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448540294}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 469519680}
+  - {fileID: 957834845}
+  m_Father: {fileID: 1394756161}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 10, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1448540296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448540294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d39ba658ea9198498e8749e12fd900d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1448540297}
+--- !u!114 &1448540297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448540294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_FillRect: {fileID: 957834845}
+  m_HandleRect: {fileID: 0}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 100
+  m_WholeNumbers: 0
+  m_Value: 100
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1453515987 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8314032409142276112, guid: 656a184609261e34298e8023e2605b20,
@@ -7676,6 +8629,27 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8314032410468065388}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1825093588 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8979031015141019655, guid: 656a184609261e34298e8023e2605b20,
+    type: 3}
+  m_PrefabInstance: {fileID: 8314032410468065388}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1825093589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825093587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08ff3b137c327a940a4e72285dfaf205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentBuildingHealth: 0
+  maxBuildingHealth: 1000
+  healthBar: {fileID: 1448540296}
 --- !u!64 &1825093591
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7690,6 +8664,22 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: a1fec1f953cf15b42bf4c5b41eed40f3, type: 3}
+--- !u!54 &1825093593
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1825093587}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1827734248 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8314032410358307342, guid: 656a184609261e34298e8023e2605b20,
@@ -7868,7 +8858,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1865309647 stripped
 GameObject:
@@ -8724,6 +9714,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!1 &2107129155 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f2927a1bf70c89b4197181abbce21c29,
+    type: 3}
+  m_PrefabInstance: {fileID: 1002183578}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2109612186 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8314032408601249230, guid: 656a184609261e34298e8023e2605b20,
@@ -8900,7 +9896,27 @@ PrefabInstance:
         type: 3}
       propertyPath: cam
       value: 
-      objectReference: {fileID: 53843168}
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494064578268851136, guid: 1c697c66536adad45a667fb387edf5e6,
+        type: 3}
+      propertyPath: referenceObject
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494064578268851137, guid: 1c697c66536adad45a667fb387edf5e6,
+        type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494064578268851137, guid: 1c697c66536adad45a667fb387edf5e6,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494064578268851137, guid: 1c697c66536adad45a667fb387edf5e6,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 116
+      objectReference: {fileID: 0}
     - target: {fileID: 3494064578268851138, guid: 1c697c66536adad45a667fb387edf5e6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8964,17 +9980,37 @@ PrefabInstance:
     - target: {fileID: 3494064578268851139, guid: 1c697c66536adad45a667fb387edf5e6,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494064578268851141, guid: 1c697c66536adad45a667fb387edf5e6,
+        type: 3}
+      propertyPath: targets.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494064578268851141, guid: 1c697c66536adad45a667fb387edf5e6,
+        type: 3}
+      propertyPath: targets.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494064578268851141, guid: 1c697c66536adad45a667fb387edf5e6,
+        type: 3}
+      propertyPath: targets.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494064578268851141, guid: 1c697c66536adad45a667fb387edf5e6,
+        type: 3}
+      propertyPath: targets.Array.data[2]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3494064578546287151, guid: 1c697c66536adad45a667fb387edf5e6,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3494064578546287151, guid: 1c697c66536adad45a667fb387edf5e6,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c697c66536adad45a667fb387edf5e6, type: 3}
@@ -9133,6 +10169,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 336517828}
     m_Modifications:
+    - target: {fileID: 156995265120654419, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 156995265665696572, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7307504222095825590, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_CastShadows
@@ -9157,6 +10203,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: WaterTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408391173200, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408391173203, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -9183,10 +10234,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408396497646, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408399108898, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408399108898, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408399108925, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -9208,6 +10269,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408399704578, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408399704605, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -9227,6 +10293,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408400668898, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408400668925, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -9258,6 +10329,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408419474508, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408419474511, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -9283,6 +10359,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408420041034, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408422016961, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -9302,6 +10383,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408422016966, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408431098497, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -9323,10 +10409,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408431098502, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408443115233, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408443115233, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408443115260, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -9363,10 +10459,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408463479401, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408474026243, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408474026243, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408474026270, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -9403,6 +10509,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408491739931, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408494104858, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -9423,6 +10534,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408494104863, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408520005288, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -9437,6 +10553,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408520005292, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408520005295, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -9458,6 +10579,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408544470348, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408544470351, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -9467,6 +10593,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408563199872, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408563199875, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -9498,6 +10629,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408573732180, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408573732183, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -9523,11 +10659,26 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408578354965, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408578425996, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 1bb3cc1469517134cb9e883bef83adaf, type: 2}
+    - target: {fileID: 8314032408578425996, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: hasRessource
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408578425996, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: ressources
+      value: 
+      objectReference: {fileID: 6316286}
     - target: {fileID: 8314032408578425997, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -9547,6 +10698,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WorldCellCrystal2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408578426033, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408601249225, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -9568,6 +10724,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408601249230, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408603451288, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -9583,6 +10744,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408603451292, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408603451295, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -9592,6 +10758,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408604054721, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408604054748, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -9628,6 +10799,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408607073157, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408608214441, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -9647,6 +10823,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408608214446, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408612559042, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -9668,6 +10849,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408612559047, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408613091104, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -9687,6 +10873,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408613091109, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408652105508, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -9708,6 +10899,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408652105513, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408658610720, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -9728,6 +10924,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408658610725, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408673056992, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -9742,6 +10943,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408673056996, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408673056999, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -9768,6 +10974,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408680905335, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408682752976, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -9788,10 +10999,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408682752981, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408688028512, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408688028512, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408688028515, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -9812,6 +11033,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: WaterTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408690516035, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408690516062, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -9848,6 +11074,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408690902245, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408691795872, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -9867,6 +11098,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408691795877, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408708736908, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -9888,6 +11124,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408708736945, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408721173482, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -9907,6 +11148,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408721173487, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408748142137, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -9928,10 +11174,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408748142142, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408757039267, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408757039267, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408757039294, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -9952,6 +11208,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408772603938, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408772603965, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -9988,6 +11249,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: WaterTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408775303173, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408783978986, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -10008,10 +11274,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408783978991, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408789673345, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408789673345, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408789673372, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -10048,6 +11324,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: WaterTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408814534238, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408826103245, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -10068,6 +11349,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408826103282, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408847589364, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10082,6 +11368,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: WaterTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408847589368, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408847589371, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -10108,6 +11399,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408854623543, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408855634100, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10122,6 +11418,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408855634104, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408855634107, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -10148,6 +11449,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408862571165, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408873158229, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -10168,6 +11474,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408873158234, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408880337608, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10182,6 +11493,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408880337612, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408880337615, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -10208,6 +11524,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408901153159, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408904744282, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -10227,6 +11548,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408904744287, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408904991098, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -10248,6 +11574,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408904991103, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408909255234, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -10267,6 +11598,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408909255239, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408926806569, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -10288,6 +11624,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408926806574, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408929681036, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10302,6 +11643,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408929681072, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408929681075, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -10328,6 +11674,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: WaterTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408960387371, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408964419785, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -10348,10 +11699,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408964419790, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408983751571, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032408983751571, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032408983751790, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -10383,6 +11744,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032408989498668, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032408989498671, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -10392,6 +11758,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409002578048, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409002578051, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -10428,6 +11799,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409005272042, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409010645482, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -10447,6 +11823,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409010645487, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409042183064, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -10468,11 +11849,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: WorldCellCrystal
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409042183068, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409042183071, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
       value: 
       objectReference: {fileID: 2100000, guid: 1bb3cc1469517134cb9e883bef83adaf, type: 2}
+    - target: {fileID: 8314032409042183071, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: hasRessource
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409042183071, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: ressources
+      value: 
+      objectReference: {fileID: 2107129155}
     - target: {fileID: 8314032409062533749, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -10492,6 +11888,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409062533754, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409075964610, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -10513,6 +11914,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409075964615, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409076062361, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -10532,6 +11938,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409076062366, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409093151278, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -10553,6 +11964,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409093151315, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409112365634, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -10573,10 +11989,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409112365639, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409113472387, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409113472387, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409113472414, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -10613,6 +12039,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409113695369, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409118711296, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10628,6 +12059,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409118711300, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409118711303, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -10642,6 +12078,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409132447441, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409132447442, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -10718,6 +12159,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409133706766, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409140606777, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -10738,10 +12184,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: WaterTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409140606782, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409142276112, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409142276112, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409142276115, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -10778,10 +12234,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409176057201, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409184733200, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409184733200, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409184733203, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -10818,6 +12284,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409204112309, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409211598705, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -10837,6 +12308,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409211598710, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409211660213, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -10858,6 +12334,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409211660218, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409240980288, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10872,6 +12353,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409240980292, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409240980295, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -10898,6 +12384,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409245991889, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409274526218, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -10917,6 +12408,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409274526223, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409294567884, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -10938,6 +12434,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409294567921, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409301655441, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -10957,6 +12458,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409301655446, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409313624193, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -10978,6 +12484,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409313624198, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409325557284, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -10993,6 +12504,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409325557288, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409325557291, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -11002,6 +12518,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409333548928, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409333548931, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -11038,6 +12559,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409336622501, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409344118442, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -11057,6 +12583,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409344118447, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409358788448, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -11078,6 +12609,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409358788453, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409373474838, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -11097,6 +12633,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409373474843, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409410915281, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -11118,6 +12659,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409410915286, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409425796304, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -11137,6 +12683,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409425796309, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409426812401, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -11158,6 +12709,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409426812406, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409429879174, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -11178,10 +12734,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409429879179, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409430306275, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409430306275, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409430306302, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -11202,6 +12768,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409442436753, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409442436972, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -11238,6 +12809,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409443613942, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409455565088, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -11253,6 +12829,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409455565092, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409455565095, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -11262,6 +12843,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409469395235, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409469395262, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -11293,10 +12879,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409479626118, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409482340864, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409482340864, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409482340867, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -11333,6 +12929,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409493922173, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409507508597, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -11352,6 +12953,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409507508602, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409510231248, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -11373,6 +12979,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409510231253, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409514130705, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -11393,6 +13004,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409514130710, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409523720164, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -11407,6 +13023,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409523720168, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409523720171, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -11433,6 +13054,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409531406527, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409541034532, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -11452,6 +13078,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: WaterTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409541034537, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409543005732, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -11473,6 +13104,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409543005737, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409547910502, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -11492,6 +13128,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409547910507, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409549901968, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -11513,6 +13154,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409549901973, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409550989072, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -11532,6 +13178,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409550989077, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409597164608, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -11553,6 +13204,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409597164613, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409605153057, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -11572,6 +13228,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409605153062, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409606907554, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -11593,6 +13254,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409606907559, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409611608236, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -11613,10 +13279,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409611608273, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409612388835, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409612388835, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409612388862, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -11648,6 +13324,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409619407608, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409619407611, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -11673,6 +13354,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409620746363, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409629464178, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -11692,6 +13378,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409629464183, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409640145237, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -11713,6 +13404,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409640145242, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409640893410, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -11732,6 +13428,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409640893415, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409659083842, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -11753,6 +13454,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409659083847, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409663424452, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -11773,10 +13479,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409663424457, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409663454225, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409663454225, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409663454444, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -11813,6 +13529,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409663513429, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409670424206, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -11833,6 +13554,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409670424243, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409675784128, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -11847,6 +13573,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: WaterTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409675784132, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409675784135, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -11873,6 +13604,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409678835506, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409685184437, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -11892,6 +13628,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409685184442, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409687710948, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -11913,10 +13654,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409687710953, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409691466178, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409691466178, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409691466205, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -11953,6 +13704,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409734018987, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409794105664, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -11967,6 +13723,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409794105668, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409794105671, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -11988,6 +13749,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409798917508, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409798917511, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -11997,6 +13763,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409807948355, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409807948382, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -12033,6 +13804,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409809062809, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409831873018, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -12052,6 +13828,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409831873023, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409835571014, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -12073,6 +13854,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409835571019, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409838365108, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -12093,10 +13879,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409838365113, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409850184962, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409850184962, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409850184989, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -12133,6 +13929,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409853245210, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409864013838, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -12152,6 +13953,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409864013875, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409865327589, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -12173,6 +13979,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409865327594, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409874547129, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -12192,6 +14003,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409874547134, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409874913936, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -12213,6 +14029,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409874913941, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409882592076, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -12232,6 +14053,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409882592113, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409885708170, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -12253,6 +14079,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409885708175, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409905402692, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -12267,6 +14098,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409905402696, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409905402699, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -12293,6 +14129,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409905444679, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409920464264, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -12312,6 +14153,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409920464269, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409921556114, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -12333,6 +14179,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409921556119, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409923145925, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -12353,6 +14204,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409923145930, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409938826376, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -12367,6 +14223,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409938826380, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409938826383, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -12393,6 +14254,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409949309159, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409955215520, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -12413,6 +14279,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409955215525, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409968635636, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -12427,6 +14298,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409968635640, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409968635643, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -12453,6 +14329,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409975783633, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409990841774, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -12472,6 +14353,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409990841811, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409996662672, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -12493,6 +14379,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032409996662677, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032409999794648, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -12507,6 +14398,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032409999794652, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032409999794655, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -12533,6 +14429,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410001190511, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410010913721, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -12552,6 +14453,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410010913726, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410025563796, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -12573,10 +14479,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410025563801, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410027136482, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410027136482, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410027136509, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -12613,6 +14529,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410040963046, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410042941649, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -12632,6 +14553,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410042941654, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410049608425, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -12653,6 +14579,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410049608430, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410050099265, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -12673,6 +14604,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: WaterTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410050099270, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410057341776, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -12687,6 +14623,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410057341780, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410057341783, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -12713,6 +14654,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410077988439, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410080640885, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -12733,10 +14679,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410080640890, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410094731202, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410094731202, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410094731229, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -12773,6 +14729,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410095464206, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410106070800, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -12793,6 +14754,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410106070805, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410113529240, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -12807,6 +14773,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410113529244, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410113529247, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -12833,6 +14804,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410124812746, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410132434548, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -12852,6 +14828,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410132434553, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410136910342, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -12873,6 +14854,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410136910347, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410157051650, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -12893,10 +14879,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: WaterTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410157051655, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410158262288, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410158262288, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410158262291, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -12933,6 +14929,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410164242614, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410171059464, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -12952,6 +14953,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410171059469, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410173465644, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -12973,6 +14979,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410173465681, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410189523194, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -12992,6 +15003,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410189523199, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410199609169, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -13013,6 +15029,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410199609174, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410200782516, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -13027,6 +15048,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410200782520, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410200782523, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -13047,6 +15073,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410203521924, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410203521927, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -13073,6 +15104,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410226918078, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410283295862, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -13092,6 +15128,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410283295867, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410286591565, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -13113,6 +15154,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410286591602, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410290852420, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -13132,6 +15178,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410290852425, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410318302537, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -13153,6 +15204,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410318302542, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410318887784, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -13167,6 +15223,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410318887788, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410318887791, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -13193,10 +15254,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: WaterTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410319425062, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410330716289, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_TagString
       value: WaterTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410330716289, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410330716316, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -13233,6 +15304,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410341145387, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410343207488, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -13248,6 +15324,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410343207492, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410343207495, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -13257,6 +15338,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410353965328, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410353965331, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -13293,6 +15379,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410358307342, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410365097226, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -13313,6 +15404,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410365097231, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410369041833, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: hasRessource
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410369041834, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -13328,6 +15429,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410369041838, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410386795040, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -13342,6 +15448,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410386795044, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410386795047, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -13363,6 +15474,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410390884952, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410390884955, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -13383,6 +15499,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410394582320, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410394582323, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -13402,6 +15523,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410405095912, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410405095915, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -13428,6 +15554,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: WaterTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410409916137, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410416695649, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -13447,6 +15578,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410416695654, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410432829168, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -13468,6 +15604,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410432829173, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410438583766, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -13488,6 +15629,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410438583771, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410450656344, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -13502,6 +15648,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410450656348, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410450656351, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -13528,10 +15679,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410455234163, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410472969619, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410472969619, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410472969838, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -13568,6 +15729,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410478159719, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410479077448, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -13582,6 +15748,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410479077452, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410479077455, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -13608,6 +15779,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410489744053, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410492036216, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -13627,6 +15803,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410492036221, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410495073828, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -13648,6 +15829,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: WaterTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410495073833, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410499814946, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: lavaMaterial
@@ -13668,6 +15854,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410499814951, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8314032410504499756, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -13682,6 +15873,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: GrassTile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8314032410504499792, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8314032410504499795, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
@@ -13708,15 +15904,40 @@ PrefabInstance:
       propertyPath: m_TagString
       value: GrassTile
       objectReference: {fileID: 0}
+    - target: {fileID: 8314032410517579173, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8425066190975476063, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8425066192611079728, guid: 656a184609261e34298e8023e2605b20,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 5
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196361144440159205, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196361144440159205, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_Name
+      value: Building_House_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196361146058943626, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9196361146058943626, guid: 656a184609261e34298e8023e2605b20,
+        type: 3}
+      propertyPath: m_Name
+      value: Building_House_2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 656a184609261e34298e8023e2605b20, type: 3}

@@ -12,7 +12,7 @@ public class TileSelector : MonoBehaviour
     public Material waterSelected;
     public Material lavaMaterial;
     public Renderer cellRenderer;
-    private GameObject ressources;
+    public GameObject ressources;
 
     private void Start()
     {
@@ -92,7 +92,13 @@ public class TileSelector : MonoBehaviour
                 cellRenderer.material = lavaMaterial;
                 other.GetComponent<WorldCell>().isLava = true;
                 other.gameObject.tag = "LavaTile";
-               // ressources = other.gameObject.transform.Find("crystals");
+
+                if (other.GetComponent<WorldCell>().hasRessource == true)
+                {
+                    other.GetComponent<WorldCell>().RessourcesCollected();
+                }
+
+               
                // Destroy(ressources.gameObject);
 
 
